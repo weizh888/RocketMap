@@ -527,7 +527,7 @@ def get_args():
                     csv_input.append('<username>,<password>')
                     csv_input.append('<ptc/google>,<username>,<password>')
 
-                    # If the number of fields is different, 
+                    # If the number of fields is different,
                     # then this is not a CSV.
                     if num_fields != line.count(',') + 1:
                         print(sys.argv[0] +
