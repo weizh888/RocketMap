@@ -80,7 +80,7 @@ How many workers will I need for the initial scan?
 
 > With -st 26, you will have 1951 cells and need about 98 workers.
 
-> To do the initial scan in an hour or so, at -kph 35, it takes about half a minute to get to a the next location to scan, and you will want to be able to scan all cells in about 10 minutes, so the workers = Cells / 20. If you reduce the -kph from 35 by half, increase the workers by double.
+> To do the initial scan in an hour or so, at -kph 35, it takes about half a minute to get to the next location to scan, and you will want to be able to scan all cells in about 10 minutes, so the workers = Cells / 20. If you reduce the -kph from 35 by half, increase the workers by double.
 
 How many workers will I need after the initial scan is done?
 
