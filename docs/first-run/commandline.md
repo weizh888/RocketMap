@@ -35,7 +35,8 @@
                     [--enable-clean]
                     [--wh-types {pokemon,gym,raid,egg,tth,gym-info,pokestop,lure,captcha}]
                     [--wh-threads WH_THREADS] [-whc WH_CONCURRENCY]
-                    [-whr WH_RETRIES] [-wht WH_TIMEOUT]
+                    [-whr WH_RETRIES] [-whct WH_CONNECT_TIMEOUT]
+                    [-whrt WH_READ_TIMEOUT]
                     [-whbf WH_BACKOFF_FACTOR] [-whlfu WH_LFU_SIZE]
                     [-whfi WH_FRAME_INTERVAL]
                     [--ssl-certificate SSL_CERTIFICATE]
@@ -112,8 +113,8 @@
                             Query the Elevation API for each step, rather than
                             only once, and store results in the database. [env
                             var: POGOMAP_USE_ALTITUDE_CACHE]
-      -nj, --no-jitter      Don't apply random -9m to +9m jitter to location. [env
-                            var: POGOMAP_NO_JITTER]
+      -j, --jitter          Apply random -5m to +5m jitter to location. [env
+                            var: POGOMAP_JITTER]
       -al, --access-logs    Write web logs to access.log. [env var:
                             POGOMAP_ACCESS_LOGS]
       -st STEP_LIMIT, --step-limit STEP_LIMIT
@@ -342,9 +343,12 @@
       -whr WH_RETRIES, --wh-retries WH_RETRIES
                             Number of times to retry sending webhook data on
                             failure. [env var: POGOMAP_WH_RETRIES]
-      -wht WH_TIMEOUT, --wh-timeout WH_TIMEOUT
-                            Timeout (in seconds) for webhook requests. [env var:
-                            POGOMAP_WH_TIMEOUT]
+      -whct WH_CONNECT_TIMEOUT, --wh-connect-timeout WH_CONNECT_TIMEOUT
+                            Connect timeout (in seconds) for webhook requests.
+                            [env var: POGOMAP_WH_CONNECT_TIMEOUT]
+      -whrt WH_READ_TIMEOUT, --wh-read-timeout WH_READ_TIMEOUT
+                            Read timeout (in seconds) for webhook requests.
+                            [env var: POGOMAP_WH_READ_TIMEOUT]
       -whbf WH_BACKOFF_FACTOR, --wh-backoff-factor WH_BACKOFF_FACTOR
                             Factor (in seconds) by which the delay until next
                             retry will increase. [env var:
